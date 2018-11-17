@@ -1,10 +1,12 @@
 # GoModules
 Useful modules for my current and future Go projects, it can be used for some usual tasks in different type of projects
 
-## Modules
-**Filetool, Taskmanager**
+## Modules:
+- **filetool.go**
 
-**Filetool functions**
+- **taskmanager.go**
+
+**Filetool functions:**
 - OpenFile(fileName string) *os.File
 
 - CreateFile(fileName string) *os.File
@@ -21,7 +23,7 @@ Useful modules for my current and future Go projects, it can be used for some us
 
 - DownloadImage(imageURL string, imageName string, callback DownloadCallback) - callback executing after image dowloaded
 
-**Taskmanager functions**
+**Taskmanager functions:**
 - **StartPeriodicTask(taskExecutionPeriod int64, timePeriodType string, workingPeriodStartHour int, workingPeriodEndHour int, controlChannel chan string, task PeriodicTask)** - executing PeriodicTask (just function) with some parameters periodically, task can be stopped by sending to its controlChannel "stop" string
 
 - **DoPeriodicTaskAtTime(timeToStart string, controlChannel chan string, task PeriodicTask)** - executing same PeriodicTask at current time every day, every minute time checking, time format example "20:30" (HH:mm), task can be stopped by sending to its controlChannel "stop" string
