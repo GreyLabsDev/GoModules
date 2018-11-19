@@ -33,7 +33,7 @@ func StartPeriodicTask(taskExecutionPeriod int64, timePeriodType string, working
 		var timeHourNow = time.Now().Hour()
 		fmt.Println("Date now " + time.Now().Weekday().String())
 		fmt.Println("Time hour now " + strconv.Itoa(timeHourNow+TIME_DIFF_MSK))
-		if timeHourNow+TIME_DIFF_MSK > workingPeriodStartHour && timeHourNow+TIME_DIFF_MSK < workingPeriodEndHour {
+		if timeHourNow > workingPeriodStartHour && timeHourNow < workingPeriodEndHour {
 			task()
 			fmt.Println("Task started")
 			firstStart = false
