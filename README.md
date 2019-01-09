@@ -15,7 +15,7 @@ Useful modules for my current and future Go projects, it can be used for some us
 
 - AppendToFile(file *os.File, stringToAppend string)
 
-- AppendToFileAndCloseAppendToFileAndClose(file *os.File, stringToAppend string)
+- AppendToFileAndClose(file *os.File, stringToAppend string)
 
 - ReadImage(imagePath string) (outImage image.Image) - for .png files
 
