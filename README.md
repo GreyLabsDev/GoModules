@@ -6,6 +6,8 @@ Useful modules for my current and future Go projects, it can be used for some us
 
 - **taskmanager.go**
 
+- **logging.go**
+
 **Filetool functions:**
 - OpenFile(fileName string) *os.File
 
@@ -29,3 +31,11 @@ Useful modules for my current and future Go projects, it can be used for some us
 - **DoPeriodicTaskAtTime(timeToStart string, controlChannel chan string, task PeriodicTask)** - executing same PeriodicTask at current time every day, every minute time checking, time format example "20:30" (HH:mm), task can be stopped by sending to its controlChannel "stop" string
 
 - **CompleteTaskQueue(taskQueue []SingleTask, endMessage string, controlChannel chan string)** - executing task array/slice alternately, one by one, after execunig fuction sends endMessage to it controlChannel, SingleTask - just function
+
+**Logging functions:**
+
+- Global access after logger initialization
+
+- Colored log outputs in your console
+
+- Few main log types like Info, Debug, Error
